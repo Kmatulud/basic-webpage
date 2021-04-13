@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("https://images.pexels.com/photos/259447/pexels-photo-259447.jpeg?cs=srgb&dl=pexels-pixabay-259447.jpg&fm=jpg");
+    background-position: center;
+    font-family: 'Akaya Telivigala', cursive;
+    color: #fff;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: "name image"
+                         "name image";
+    width: 80%;
+    margin: 4rem auto 2rem auto;
+    justify-self: center;
+    align-items: center;
+    padding-top: 20px;
+}
+header .image-container {
+    grid-area: image;
+    margin-left: 2em;
+    width: 50%;
+    position: relative;
+    object-fit: fill;
+}
+h1{
+    font-size: 2.5rem;
+}
+.image-container img {
+    width: 100%;
+}
+.name {
+    grid-area: name;
+    text-align:end;
+    align-self: center;
+}
+.one{
+     width: 90%;
+     margin: auto;
+}
+
+.one .content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: "image image p p"
+                         "image image p p";
+    width: 100%;
+}
+.one .content .img-container {
+    grid-area: image;
+    position: relative;
+    width: 70%;
+    object-fit: fill;
+}
+.one .content .img-container img{
+    width: 100%;
+}
+.one .content .content-info {
+    grid-area: p;
+    font-size: 1.4rem;
+}
+.places-container{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.places-container h1{
+    text-align: center;
+}
+.places{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: "p1 p2 p3"
+                         "p1 p2 p3"
+                         "p1 p2 p3";
+    width: 100%;
+    margin: 2rem auto;
+    gap: 20px;
+}
+
+
+.places-container .places .place1{
+    grid-area: p1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: "text image"
+                         "text image"
+                         "text image";
+    gap: 20px;
+}
+
+.places-container .places .place2 {
+    grid-area: p2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: "text image"
+                         "text image"
+                         "text image";
+    gap: 20px
+}
+.Content{
+    grid-area: text;
+}
+.places-container .places .place3 {
+    grid-area: p3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: "text image"
+                         "text image"
+                         "text image";
+    gap: 20px
+}
+.b-gardens, .u-buildings, .zoo{
+    grid-area: image;
+    width: 10rem;
+    height:15rem;
+    object-fit: fill;
+    position: relative;
+    overflow: hidden;
+}
+.b-gardens img, .u-buildings img, .zoo img {
+    width: 100%;
+    transform: scale(1.5);
+    transform-origin: top;
+}
+
+.table{
+     width: 90%;
+     margin: auto;
+}
+
+.table h1{
+ text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+h1 {
+    margin-bottom: 20px;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 0.5rem;
+    border: 2px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #ececec;
+    color: rgb(75, 75, 75);
+}
+
+tr:hover {
+    background-color: #d3d3d3;
+}
+
+th {
+    background-color: rgb(173, 20, 20);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+footer {
+    background: rgb(60, 129, 185);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 2rem;
+        margin-top: 4rem;
+    }
+    .places {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "p1 p1"
+                             "p2 p2"
+                             "p3 p3";
+        margin: 2rem auto;
+    }
+    .places-container .places .place1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .places-container .places .place2 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1fr);
+        grid-template-areas: "image text"
+                             "image text"
+                             "image text";
+        margin: 3rem auto;
+    }
+    .places-container .places .place3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .u-buildings, .b-gardens, .zoo{
+        width: 15rem;
+    }
+    .u-buildings{
+        margin-right: 2rem;
+    }
+    .u-buildings img, .b-gardens img, .zoo img{
+        transform: scale(1);
+    }
+    .one p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    header .image-container {
+        grid-area: image;
+        margin-left: 2em;
+        width: 95%;
+        position: relative;
+        object-fit: fill;
+    }
+    .image-container img {
+        width: 100%;
+    }
+    .one .content .img-container {
+        position: relative;
+        width:10rem;
+        height: 12rem;
+        overflow: hidden;
+        object-fit: fill;
+    }
+    .img-container img {
+        width: 100%;
+        transform: scale(2);
+        transform-origin: top;
+    }
+    .b-gardens,
+    .u-buildings,
+    .zoo {
+        grid-area: image;
+        width: 10rem;
+        height: 15rem;
+        object-fit: fill;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .b-gardens img,
+    .u-buildings img,
+    .zoo img {
+        width: 100%;
+        transform: scale(1.5);
+        transform-origin: top;
+    }
+    .one .content .content-info p{
+        font-size: .8rem;
+    }
+}
+@media(max-width:320px){
+    header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1fr);
+        grid-template-areas: "image image"
+                             "name name";
+        width: 80%;
+        margin: 1rem auto 2rem auto;
+        justify-self: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .one, .places-container{
+        margin-left: 1.5rem;
+    }
+    header{
+        margin-right: 3.5rem;
+    }
+    .name{
+        margin-top: 1rem;
+    }
+    .one .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1fr);
+        grid-template-areas: "p p"
+                             "image image";
+        width: 100%;
+    }
+    .one .content .img-container{
+        margin-top: 1rem;
+        width: 16rem;
+    }
+    .places-container .places .place1,
+    .places-container .places .place2,
+    .places-container .places .place3 {
+        grid-area: p1, p2, p3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1fr);
+        grid-template-areas: "text text"
+                             "image image";
+        gap: 20px;
+    }
+    .u-buildings, .b-gardens, .zoo{
+        width: 16rem;
+    }
+}

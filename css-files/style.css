@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(4, 4, 15);
+    color: white;
+    overflow-x: hidden;
+}
+.main{
+    display: grid;
+    justify-content: center;
+    padding: 6rem;
+}
+.main .content-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .content-items .myPic{
+    border: 5px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 40%;
+}
+
+.myPic img{
+    width: 100%;
+    transform: scale(1.1);
+}
+.main .content-items .content{
+    margin-bottom: 1.5rem;
+}
+.main .content-items .content span{
+    color: rgb(228, 120, 120);
+}
+.main .content-items .content p{
+    text-align: center;
+}
+.buttons a{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+button{
+    margin: 2px;
+    border-radius: 10px;
+    background-color: rgb(228, 120, 120);
+    padding: 10px;
+}
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    grid-area: footer;
+    padding: 25px;
+    background-color: blueviolet;
+}
+@media (max-width: 425px){
+    .main .content-items .content h1{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .buttons{
+        width: 10rem;
+    }
+    button{
+        width: 10rem;
+    }
+    .main .content-items{
+        align-items: center;
+    }
+}
